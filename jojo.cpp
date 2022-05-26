@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(){
-	int V[17] = {0};								//Cria array que servirá como auxiliar para a criação de pacientes
+	int V[12] = {0};								//Cria array que servirá como auxiliar para a criação de pacientes
 	int id = 0;										//Id de cada paciente
 	int categoriaAtual = 1;							//Armazena o index da categoria da lista (sexo, idade, doençaA, doençaB,...)
 	int elemAtual = 0;								//Cria int que receberá valor convertido de string para int da variável 'atual'
@@ -32,10 +32,12 @@ int main(){
 				V[categoriaAtual] = elemAtual;		//Adiciona elemento na array auxiliar V
 				categoriaAtual++;					//Aumenta o index da array V
 			}
-			id++;									//Aumenta o ID para o próximo paciente
-		}
+			id++;			//Aumenta o ID para o próximo paciente
+			ll->insertTail(V[0],V[1],V[2],V[3],V[4],V[5],V[6],V[7],V[8],V[9],V[10],V[11]);
 			
+		}
 		arquivo.close();							//Fecha arquivo
+		ll->print();
 	}
 	else{											//Caso não seja possível abrir o arquivo, imprime uma string de erro.
 		cout << "Não foi possível abrir o arquivo" << endl;

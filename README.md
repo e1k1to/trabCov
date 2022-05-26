@@ -1,5 +1,9 @@
 Trabalho de Estrutura de Dados:
 	Usa como base trabalho feito sobre o problema de josephus	
+	FEITO:
+		MODIFICAÇÃO PARA RECEBER AS INFORMAÇÕES NA LISTA ENCADEADA
+		LER ARQUIVO CSV
+		COLOCAR NA LISTA ENCADEADA
 	FAZER:
-		Integração com a lista encadeada, todo o resto pra frente disso
-	
+		PEGAR DADOS ESPECÍFICOS DOS PACIENTES, EXEMPLO: FUMANTES + TESTE_COV + OBITO
+		graficos (i guess?)

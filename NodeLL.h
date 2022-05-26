@@ -7,18 +7,13 @@ class NodeLL  // ll = linked List
 {
 public:
 	NodeLL(){ id =0; prox = nullptr;	};
-	NodeLL(int id, int sexo, int tipo_paciente, int intubado, int pneumonia, int idade, int gravidez, int diabetes, int asma, int imunossupressao, int hipertensao, int cardiovascular, int obesidade, int fumante, int teste_covid, int icu, int obito, NodeLL* prox){
+	NodeLL(int id, int sexo, int intubado, int pneumonia, int diabetes, int asma, int cardiovascular, int obesidade, int fumante, int teste_covid, int icu, int obito, NodeLL* prox){
 			this->id = id;
 			this->sexo = sexo;
-			this->tipo_paciente = tipo_paciente;
 			this->intubado = intubado;
 			this->pneumonia = pneumonia;
-			this->idade = idade;
-			this->gravidez = gravidez;
 			this->diabetes = diabetes;
 			this->asma = asma;
-			this->imunossupressao = imunossupressao;
-			this->hipertensao = hipertensao;
 			this->cardiovascular = cardiovascular;
 			this->obesidade = obesidade;
 			this->fumante = fumante;
@@ -32,15 +27,10 @@ public:
 	NodeLL *getProx() { return prox; };
 	int getId(){ return id;};
 	int getSexo(){return sexo;};
-    int getTipo_paciente(){return tipo_paciente;};
 	int getIntubado(){return intubado;};
 	int getPneumonia(){return pneumonia;};
-	int getIdade(){return idade;};
-	int getGravidez(){return gravidez;};
 	int getDiabetes(){return diabetes;};
 	int getAsma(){return asma;};
-	int getImunossupressao(){return imunossupressao;};
-	int getHipertensao(){return hipertensao;};
 	int getCardiovascular(){return cardiovascular;};
 	int getObesidade(){return obesidade;};
 	int getFumante(){return fumante;};
@@ -54,15 +44,10 @@ public:
 private:
     int id;
     int sexo;
-    int tipo_paciente;
 	int intubado;
 	int pneumonia;
-	int idade;
-	int gravidez;
 	int diabetes;
 	int asma;
-	int imunossupressao;
-	int hipertensao;
 	int cardiovascular;
 	int obesidade;
 	int fumante;
