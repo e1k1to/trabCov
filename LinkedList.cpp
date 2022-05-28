@@ -37,10 +37,10 @@ bool LinkedList::isFull(){
 	return false;
 };
 		
-bool LinkedList::insertHead(int id, int sexo, int intubado, int pneumonia, int diabetes, int asma, int cardiovascular, int obesidade, int fumante, int teste_covid, int icu, int obito){
+bool LinkedList::insertHead(int id, int intubado, int asma, int fumante, int teste_covid, int obito){
 	NodeLL *aux, *pAnda=nullptr;
     if (!isFull()){
-      aux = new NodeLL(id, sexo, intubado, pneumonia, diabetes, asma, cardiovascular, obesidade, fumante, teste_covid, icu, obito, nullptr);
+      aux = new NodeLL(id, intubado, asma, fumante, teste_covid, obito, nullptr);
       if (isEmpty()){ // Lista est� vazia
         head = aux;
 		aux->setProx(getHead());
@@ -58,10 +58,10 @@ bool LinkedList::insertHead(int id, int sexo, int intubado, int pneumonia, int d
     else return false; // std::cout << "Overflow � Sem mem�ria";
 };
 
-bool LinkedList::insertTail(int id, int sexo, int intubado, int pneumonia, int diabetes, int asma, int cardiovascular, int obesidade, int fumante, int teste_covid, int icu, int obito){
+bool LinkedList::insertTail(int id, int intubado, int asma, int fumante, int teste_covid, int obito){
 	NodeLL *aux, *pAnda;
     if (!isFull()){
-      aux = new NodeLL(id, sexo, intubado, pneumonia, diabetes, asma, cardiovascular, obesidade, fumante, teste_covid, icu, obito, nullptr);
+      aux = new NodeLL(id, intubado, asma, fumante, teste_covid, obito, nullptr);
       if (isEmpty()){ // Lista est� vazia
         head = aux;
 		aux->setProx(getHead());
@@ -145,28 +145,9 @@ void LinkedList::print(){
     pAnda = head;
 	do{
 		std::cout << "[ " << pAnda->getId() << ",";
-		std::cout << pAnda->getId() << "," << pAnda->getSexo() << "," << pAnda->getIntubado() << "," << pAnda->getPneumonia() << "," << pAnda->getDiabetes() << "," << pAnda->getAsma() << "," << pAnda->getCardiovascular() << "," << pAnda->getObesidade() << "," << pAnda->getFumante() << "," << pAnda->getTeste_covid() << "," << pAnda->getIcu() << "," << pAnda->getObito() << " ] ";
+		std::cout << pAnda->getId() << "," << pAnda->getIntubado() << "," << pAnda->getAsma() << "," << pAnda->getFumante() << "," << pAnda->getTeste_covid() << "," << pAnda->getObito() << " ] ";
 		pAnda = pAnda->getProx();
 	}while(pAnda != nullptr && pAnda->getId() != getHead()->getId());
 	}
 	std::cout <<  "]\n";
 }
-		
-
-/*  pAnda->getId() << "," <<
-	pAnda->getSexo() << "," <<
-    pAnda->getTipo_paciente() << "," <<
-	pAnda->getIntubado() << "," <<
-	pAnda->getPneumonia() << "," <<
-	pAnda->getIdade() << "," <<
-	pAnda->getGravidez() << "," <<
-	pAnda->getDiabetes() << "," <<
-	pAnda->getAsma() << "," <<
-	pAnda->getImunossupressao() << "," <<
-	pAnda->getHipertensao() << "," <<
-	pAnda->getCardiovascular() << "," <<
-	pAnda->getObesidade() << "," <<
-	pAnda->getFumante() << "," <<
-	pAnda->getTeste_covid() << "," <<
-	pAnda->getIcu() << "," <<
-	pAnda->getObito()			*/

@@ -13,8 +13,8 @@ class LinkedList{
 		~LinkedList();
 		bool isEmpty();
 		bool isFull();
-		bool insertHead(int id, int sexo, int intubado, int pneumonia, int diabetes, int asma, int cardiovascular, int obesidade, int fumante, int teste_covid, int icu, int obito);
-		bool insertTail(int id, int sexo, int intubado, int pneumonia, int diabetes, int asma, int cardiovascular, int obesidade, int fumante, int teste_covid, int icu, int obito);
+		bool insertHead(int id, int intubado, int asma, int fumante, int teste_covid, int obito);
+		bool insertTail(int id, int intubado, int asma, int fumante, int teste_covid, int obito);
 		NodeLL *search(int id);
 		bool remove(int id);
 		void clear();
