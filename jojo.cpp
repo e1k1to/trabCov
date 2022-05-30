@@ -15,6 +15,7 @@ int main(){
 	int fumante = 0;								//Cria int que armazenará quantidade de fumantes
 	int asmaCovidIntubado = 0;				//Cria int que armazenará quantidade de pessoas com asma, covid e que foram entubados
 	int asma = 0;							//Cria int que armazenará quantidade de pessoas com asma
+	int obito = 0;						//Cria int que armazenará quantidade de pacientes que foram à obito com covid.
 	int testePositivo = 0;					//Cria int que armazenará quantidade de testes positivos de covid
 	int intubado = 0;						//Cria int que armazenará quantidade de pessoas intubadas
 	string linha;									//Cria string que armanezará a linha temporária do arquivo
@@ -70,6 +71,7 @@ int main(){
 					fumanteAtual++;
 				}
 				if( pAnda->getObito() == 1 ){
+					obito++;
 					obitoAtual++;
 				}
 				if( pAnda->getIntubado() == 1 ){
@@ -94,7 +96,9 @@ int main(){
 		}
 		cout << "==================================================" << endl;
 		cout << "Total de testes positivos: " << testePositivo << endl;
+		cout << endl;
 		cout << "Total de fumantes com covid: " << fumante << endl;
+		cout << "Total de pacientes com covid que foram a obito: " << obito << endl;
 		cout << endl;
 		cout << "Total de fumantes com covid que foram a obito: " << fumanteCovidObito << endl;
 		cout << endl;
